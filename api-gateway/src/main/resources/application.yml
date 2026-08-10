@@ -6,23 +6,25 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/api/users/**
-        - id: vehicle-service
-          uri: lb://VEHICLE-SERVICE
-          predicates:
-            - Path=/api/vehicles/**
-        - id: parking-service
-          uri: lb://PARKING-SPACE-SERVICE
-          predicates:
-            - Path=/api/parking/**
-        - id: payment-service
-          uri: lb://PAYMENT-SERVICE
-          predicates:
-            - Path=/api/payments/**
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/users/**
+            - id: vehicle-service
+              uri: lb://VEHICLE-SERVICE
+              predicates:
+                - Path=/api/vehicles/**
+            - id: parking-service
+              uri: lb://PARKING-SPACE-SERVICE
+              predicates:
+                - Path=/api/parking/**
+            - id: payment-service
+              uri: lb://PAYMENT-SERVICE
+              predicates:
+                - Path=/api/payments/**
 
 eureka:
   client:
