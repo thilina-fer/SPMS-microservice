@@ -156,13 +156,6 @@ All endpoints were tested end-to-end using **Postman**, including:
 
 ---
 
-## Resources
-
-- [Postman Collection](./postman_collection.json)
-- ![Eureka Dashboard](./docs/screenshots/eureka_dashboard.png)
-
----
-
 ## Author
 
 **Thilina Dilshan Fernando**
